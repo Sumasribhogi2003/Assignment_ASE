@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Words and Sort Array</title>
+</head>
+<body>
+    <h1>Reverse Words in Sentence and Sort Array</h1>
+
+    <h2>Reverse Words Example:</h2>
+    <p id="reverseResult"></p>
+
+    <h2>Sort Array Example:</h2>
+    <p id="sortResult"></p>
+
+    <script>
+        // Function to reverse every word in a sentence
+        function reverseWords(sentence) {
+            return sentence.split(' ').map(word => word.split('').reverse().join('')).join(' ');
+        }
+
+        // Function to sort an array in descending order
+        function sortArrayDescending(arr) {
+            return arr.sort((a, b) => b - a);
+        }
+
+        // Example 1: Reverse words in sentence
+        let sentence = "This is a sunny day";
+        let reversedSentence = reverseWords(sentence);
+        document.getElementById('reverseResult').innerText = reversedSentence; // Display result
+
+        // Example 2: Sort array in descending order
+        let array = [5, 3, 8, 1, 2];
+        let sortedArray = sortArrayDescending(array);
+        document.getElementById('sortResult').innerText = sortedArray.join(', '); // Display result
+    </script>
+</body>
+</html>
